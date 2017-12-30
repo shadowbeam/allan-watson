@@ -1,0 +1,45 @@
+@import '../../../components/variables.less';
+@import '../../../components/fonts.less';
+
+.header {
+  color: @dark-grey;
+  font-size: 120px;
+  margin-left: -25px;
+  padding-top: 125px;
+  margin-bottom: 150px;
+
+  .line-one {
+    font-family: blackout, sans-serif;
+    text-transform: uppercase;
+    font-size: 137%;
+    margin-left: 5px;
+    text-shadow: #fff 2px 2px;
+  }
+
+  .line-two {
+    font-family: roboto, sans-serif;
+    line-height: 75%;
+    font-size: 120%;
+    text-shadow: #fff 2px 2px;
+  }
+
+  [class^=Header-line] {
+    display: block;
+  }
+
+  .dot {
+    position: absolute;
+    color: @primary;
+    text-shadow: none;
+    font-size: 50%;
+    line-height: 255%;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    font-size: 18vw;
+    margin-bottom: 75px;
+  }
+}
