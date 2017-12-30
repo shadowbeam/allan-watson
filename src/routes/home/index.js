@@ -13,7 +13,7 @@ import Home from './Home';
 function action() {
   return {
     chunks: ['home'],
-    title: 'React Starter Kit',
+    title: 'Allan Watson',
     component: (
       <div>
         <Home />
