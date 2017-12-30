@@ -9,11 +9,17 @@
 
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import classNames from 'classnames';
 import s from './Home.less';
 
 class Home extends React.Component {
   render() {
-    return <div>hame</div>;
+    return (
+      <div className="App">
+        <div className={classNames(s.bg, s.right)} />
+        <div className={classNames(s.bg, s.left)} />
+      </div>
+    );
   }
 }
 
