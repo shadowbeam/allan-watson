@@ -80,6 +80,8 @@ class Html extends React.Component {
               defer
             />
           )}
+
+          <script src="https://use.fontawesome.com/77a7fe205e.js" />
         </body>
       </html>
     );
