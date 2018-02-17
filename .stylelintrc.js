@@ -32,10 +32,23 @@ module.exports = {
       },
     ],
 
+    'selector-pseudo-element-colon-notation' : null,
+
     'selector-pseudo-class-no-unknown': [
       true,
       {
         ignorePseudoClasses: [
+          // CSS Modules :global scope
+          // https://github.com/css-modules/css-modules#exceptions
+          'global',
+        ],
+      },
+    ],
+
+    'selector-pseudo-element-no-unknown': [
+      true,
+      {
+        ignorePseudoElements: [
           // CSS Modules :global scope
           // https://github.com/css-modules/css-modules#exceptions
           'global',

@@ -12,11 +12,18 @@ class SocialItem extends Component {
     this.socialItem = props.value;
     this.enableHover = this.enableHover.bind(this);
     this.disableHover = this.disableHover.bind(this);
+
+    if (this.socialItem.icomoon) {
+      this.clazzName = `fa icon-${this.socialItem.icon}`;
+    } else {
+      this.clazzName = `fa fa-${this.socialItem.icon}`;
+    }
   }
 
   hover: boolean;
   hex: string = '';
   socialItem: SocialItemModel;
+  clazzName: string = '';
 
   enableHover() {
     this.hover = true;
@@ -38,7 +45,7 @@ class SocialItem extends Component {
           onMouseEnter={this.enableHover}
           onMouseLeave={this.disableHover}
         >
-          <i className={`fa fa-${this.socialItem.icon}`} aria-hidden="true" />
+          <i className={this.clazzName} aria-hidden="true" />
         </div>
       </a>
     );

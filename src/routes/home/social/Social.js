@@ -22,6 +22,7 @@ class Social extends React.Component {
       'nike',
       'https://secure-nikeplus.nike.com/plus/profile/shadowbeam/',
       '#e2142d',
+      true,
     ),
     new SocialItem(
       'google-plus',
@@ -38,22 +39,23 @@ class Social extends React.Component {
       'songkick',
       'https://www.songkick.com/users/shadowbeam',
       '#f80046',
+      true,
     ),
     new SocialItem(
       'instagram',
-      'http://www.instagram.com/shadowbeam',
+      'http://www.instagram.com/watson.allan',
       '#405de6',
     ),
   ];
 
+  socialItems() {
+    return this.social.map(socialItem => (
+      <SocialItemComponent value={socialItem} key={socialItem.icon} />
+    ));
+  }
+
   render() {
-    return (
-      <div className="social-items">
-        {this.social.map(socialItem => (
-          <SocialItemComponent value={socialItem} />
-        ))}
-      </div>
-    );
+    return <div className="social-items">{this.socialItems()}</div>;
   }
 }
 
